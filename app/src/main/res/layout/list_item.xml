@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/view_padding"
+    android:theme="@style/Theme.MaterialComponents.Light.Bridge"
+    app:cardCornerRadius="@dimen/view_padding"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    android:padding="@dimen/view_padding"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+             <TextView
+                android:id="@+id/txtCountryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:text="Country:"/>
+
+            <TextView
+                android:id="@+id/txtCountryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txtCountryTitle"
+                android:textSize="19sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:text="Kenya"/>
+
+            <TextView
+                android:id="@+id/txtConfirmTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtCountryTitle"
+                android:textColor="#000"
+                android:text="Total Confirmed:"/>
+
+            <TextView
+                android:id="@+id/txtConfirmCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:layout_toRightOf="@+id/txtConfirmTitle"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtCountryName"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:text="32435465475"/>
+
+
+            <TextView
+                android:id="@+id/txtTotalDeathsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtConfirmTitle"
+                android:textColor="#000"
+                android:text="Total Deaths:"/>
+
+            <TextView
+                android:id="@+id/txtTotalDeaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:layout_toRightOf="@+id/txtTotalDeathsTitle"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtConfirmCases"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000"
+                android:text="32435465475"/>
+
+            <TextView
+                android:id="@+id/txtRecoveredTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/txtTotalDeathsTitle"
+                android:textColor="#000"
+                android:text="Total Recovered:"/>
+
+            <TextView
+                android:id="@+id/txtRecovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:layout_toRightOf="@+id/txtRecoveredTitle"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtTotalDeaths"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000"
+                android:text="32435465475"/>
+       </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>

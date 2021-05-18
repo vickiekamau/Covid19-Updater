@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Jokam</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in">Sign in</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? Register</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="get_started">Get Started</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="i_agree_with_the_terms_and_conditions">I agree with the terms and conditions</string>
+    <string name="sign_up">Sign up</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="already_have_an_account_sign_in">Already have an account? Sign in</string>
+    <string name="facebook_app_id">148631557157862</string>
+    <string name="fb_login_protocol_scheme">fb148631557157862</string>
+    <string name="search_hint">Search Country</string>
+
+
+</resources>

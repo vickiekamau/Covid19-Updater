@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "20246756970",
+    "project_id": "jokam-client-auth",
+    "storage_bucket": "jokam-client-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20246756970:android:3d41c09e33b818aad15413",
+        "android_client_info": {
+          "package_name": "com.example.jokam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "20246756970-i0amvaj5l8j2v3nq4htl5o97a242a06l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jokam",
+            "certificate_hash": "1612f01144b93652446f19141a7da15d5ecf42ba"
+          }
+        },
+        {
+          "client_id": "20246756970-5k5ouifonc2mp1n0t2pvvhemgaruiu5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCChyokf5HiqrxAdItKAwXhism5BejWjsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "20246756970-5k5ouifonc2mp1n0t2pvvhemgaruiu5o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
