@@ -108,6 +108,30 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="#000"
                 android:text="32435465475"/>
+           <TextView
+               android:id="@+id/dateUpdatedTitle"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="19sp"
+               android:textStyle="bold"
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:layout_below="@+id/txtRecoveredTitle"
+               android:textColor="#000"
+               android:text="Date Updated:"/>
+
+           <TextView
+               android:id="@+id/dateUpdated"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="19sp"
+               android:layout_toRightOf="@+id/dateUpdatedTitle"
+               android:layout_marginTop="10dp"
+               android:layout_below="@+id/txtRecovered"
+               android:layout_marginLeft="10dp"
+               android:layout_marginBottom="10dp"
+               android:textColor="#000"
+               android:text="32435465475"/>
        </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

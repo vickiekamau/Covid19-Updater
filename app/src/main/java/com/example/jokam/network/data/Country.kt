@@ -1,4 +1,4 @@
 package com.example.jokam.network.data
 
-class Country(val Countries: List<GlobalData>){
+class Country(val Countries: List<WorldResponseItem>){
 }

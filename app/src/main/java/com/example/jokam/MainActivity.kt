@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.jokam.databinding.ActivityMainBinding
@@ -15,12 +16,14 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_dashboard.*
 import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var activityMainBinding: ActivityMainBinding
     private lateinit var mGoogleSignInClient: GoogleSignInClient
+    private lateinit var mprogressBar: ProgressBar
     private final var RC_SIGN_IN:Int = 1
     private lateinit var mFirebaseAuth: FirebaseAuth
     private var TAG: String = "FacebookAuthentication"
@@ -30,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(activityMainBinding.root)
+        mprogressBar = progressBar
 
         activityMainBinding.signInGoogle.setOnClickListener(View.OnClickListener { signIn() })
 
@@ -53,6 +57,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun userValidation() {
         val validator = InputValidator()
+        progressBar.visibility = View.VISIBLE
         if (validator.validateEmailOptional(
                 activityMainBinding.emailLayout,
                 activityMainBinding.emailInput
@@ -71,10 +76,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun loginUser(email: String, password: String) {
         mFirebaseAuth.signInWithEmailAndPassword(email, password)
+
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
+                    progressBar.visibility = View.GONE
                     val user = mFirebaseAuth.currentUser
                     val intent = Intent(this@MainActivity,Dashboard::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)

@@ -8,6 +8,9 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import org.apache.commons.text.WordUtils
 import org.apache.commons.validator.routines.EmailValidator
+import java.text.DateFormat
+import java.text.ParseException
+import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -167,5 +170,13 @@ class InputValidator {
 
             override fun afterTextChanged(s: Editable) {}
         })
+    }
+
+    @Throws(ParseException::class)
+    private fun formatDate(d: String?): String? {
+        val inputFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ", Locale.getDefault())
+        val outputFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val date = inputFormat.parse(d)
+        return outputFormat.format(date)
     }
 }
